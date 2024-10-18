@@ -9,8 +9,8 @@
 
 ## Screenshot
 
-![6](https://github.com/btcoin23/Growtradebot/assets/138183918/351d8203-6f4d-4560-8b70-cecf0468ad9a)
-![z](https://github.com/btcoin23/Growtradebot/assets/138183918/20e824c4-82ab-4774-a4b3-5434d4cf925f)
+![6](https://github.com/dodger213/Telegram-Solana-trading-bot/assets/138183918/351d8203-6f4d-4560-8b70-cecf0468ad9a)
+![z](https://github.com/dodger213/Telegram-Solana-trading-bot/assets/138183918/20e824c4-82ab-4774-a4b3-5434d4cf925f)
 
 ## Tech stack
 - Typescript
@@ -38,13 +38,13 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/btcoin23/Growtradebot.git
+git clone https://github.com/dodger213/Telegram-Solana-trading-bot.git
 ```
 
 2. Go to the project directory:
 
 ```sh
-cd Growtradebot
+cd Telegram-Solana-trading-bot
 ```
 
 3. Install the dependencies:
@@ -90,6 +90,6 @@ npm run serve
 ## Version 1.0,   21/6/2024
 
 ## Contact me
-- [Telegram](https://t.me/BTC0in23)
+- [Telegram](https://t.me/dodger0213)
 
-- [Github](https://github.com/btcoin23)
+- [Github](https://github.com/dodger213)
