@@ -1,7 +1,7 @@
 {
-  "name": "solgradetradebot",
+  "name": "growsol-trading-bot",
   "version": "1.0.0",
-  "description": "growtrade bot on the top of growsol project",
+  "description": "A comprehensive Solana trading bot for Telegram that enables tracking, buying, and selling SPL tokens on Raydium, Jupiter, and Pump.fun. Features include real-time token monitoring, JITO-powered transactions, auto-trading capabilities, PNL tracking, secure wallet creation, and referral system integration. Built on the GrowSol ecosystem to provide a secure and efficient trading experience without requiring users' private keys.",
   "main": "serve.ts",
   "scripts": {
     "serve": "nodemon ./serve.ts",

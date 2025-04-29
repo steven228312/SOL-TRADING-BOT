@@ -1,7 +1,4 @@
-import TelegramBot, {
-  KeyboardButton,
-  ReplyKeyboardMarkup,
-} from "node-telegram-bot-api";
+import TelegramBot from "node-telegram-bot-api";
 import { TradeBotID, WELCOME_REFERRAL } from "../bot.opts";
 import { copytoclipboard } from "../utils";
 import {
@@ -56,7 +53,7 @@ export const showWelcomeReferralProgramMessage = async (
       };
 
       const caption =
-        `<b>🎉 Welcome to the referral program</b>\n\n` +
+        `<b>🎉 Welcome to the referral program, ${chat.first_name || 'there'}!</b>\n\n` +
         `Please create a unique referral code to get started👇.`;
       await bot.sendPhoto(chatId, WELCOME_REFERRAL, {
         caption: caption,
@@ -71,7 +68,7 @@ export const showWelcomeReferralProgramMessage = async (
       let totalAmount = await get_referral_amount(uniquecode);
       const referralLink = `https://t.me/${TradeBotID}?start=${uniquecode}`;
       const contents =
-        "<b>🎉 Welcome to referral program</b>\n\n" +
+        `<b>🎉 Welcome to referral program, ${chat.first_name || 'there'}!</b>\n\n` +
         `<b>Refer your friends and earn 25% of their fees in the first 45 days, 20% in the next 45 days and 15% forever!</b>\n\n` +
         `<b>Referred Count: ${num.num}\nSol Earned: ${totalAmount.totalAmount}</b>\n\n` +
         `<b>Your referral code 🔖</b>\n${copytoclipboard(uniquecode)}\n\n` +

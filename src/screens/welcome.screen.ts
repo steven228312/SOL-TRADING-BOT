@@ -95,12 +95,13 @@ const newUserHandler = async (bot: TelegramBot, msg: TelegramBot.Message) => {
 
   // send private key & wallet address
   const caption =
-    `👋 Welcome to GrowTradeBot!\n\n` +
-    `A new wallet has been generated for you. This is your wallet address\n\n` +
+    `👋 Welcome to GrowSOL TradeBot, ${msg.chat.first_name || 'friend'}!\n\n` +
+    `🎉 A new wallet has been successfully created for you. Below is your wallet address:\n\n` +
     `${wallet_address}\n\n` +
-    `<b>Save this private key below</b>❗\n\n` +
+    `<b>⚠️ Please save your private key securely:</b>\n\n` +
     `<tg-spoiler>${private_key}</tg-spoiler>\n\n` +
-    `<b>To get started, please read our <a href="https://docs.growsol.io">docs</a></b>`;
+    `🔰 <b>Important:</b> Losing this key means losing access to your wallet.\n\n` +
+    `📘 <b>To get started, check out our <a href="https://docs.growsol.io">documentation</a>.</b>`;
 
   await bot.sendMessage(chat_id, caption, {
     parse_mode: "HTML",
@@ -132,18 +133,18 @@ export const welcomeGuideHandler = async (
   if (!user) return;
   const solbalance = await TokenService.getSOLBalance(user.wallet_address);
   const caption =
-    `<b>Welcome to GrowTrade | Beta Version</b>\n\n` +
-    `The Unique Solana Trading Bot. Snipe, trade and keep track of your positions with GrowTrade.\n\n` +
-    `⬩ A never seen unique Burn Mechanism 🔥\n` +
-    `⬩ Revenue Share through Buybacks on GrowSol ($GRW)\n\n` +
-    `<b>💳 My Wallet:</b>\n${copytoclipboard(user.wallet_address)}\n\n` +
-    `<b>💳 Balance:</b> ${solbalance} SOL\n\n` +
-    `<a href="https://solscan.io/address/${user.wallet_address}">View on Explorer</a>\n\n` +
-    `<b>Part of <a href="https://growsol.io">GrowSol</a>'s Ecosystem</b>\n\n` +
+    `<b>👋 Welcome to GrowSOLTrade, ${msg.chat.first_name || 'friend'}!</b>\n\n` +
+    `🚀 The unique Solana trading bot that lets you snipe, trade, and manage your positions with ease.\n\n` +
+    `🔹 <b>Innovative Burn Mechanism</b> — unlike anything seen before 🔥\n` +
+    `🔹 <b>Revenue Sharing</b> through GrowSol ($GRW) buybacks\n\n` +
+    `<b>💳 Wallet Address:</b>\n${copytoclipboard(user.wallet_address)}\n\n` +
+    `<b>💰 Balance:</b> ${solbalance} SOL\n\n` +
+    `<a href="https://solscan.io/address/${user.wallet_address}">🔍 View on Solscan</a>\n\n` +
+    `🌐 <b>Part of the <a href="https://growsol.io">GrowSol</a> Ecosystem</b>\n\n` +
     // `-----------------------\n` +
     // `<a href="https://docs.growsol.io/docs">📖 Docs</a>\n` +
     // `<a href="https://growsol.io">🌍 Website</a>\n\n` +
-    `<b>Paste a contract address to trigger the Buy/Sell Menu or pick an option to get started.</b>`;
+    `<b>📥 Paste a contract address to open the Buy/Sell menu, or choose an option below to get started.</b>`;
 
   // const textEventHandler = async (msg: TelegramBot.Message) => {
   //   const receivedChatId = msg.chat.id;

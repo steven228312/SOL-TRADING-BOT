@@ -1,5 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
-import { PNL_IMG_GENERATOR_API, GROWSOL_TRADING_BOT_API_TOKEN } from "./config";
+import { GROWSOL_TRADING_BOT_API_TOKEN } from "./config";
 import { AlertBotID, BotMenu } from "./bot.opts";
 import { WelcomeScreenHandler } from "./screens/welcome.screen";
 import { callbackQueryHandler } from "./controllers/callback.handler";
