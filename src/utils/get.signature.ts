@@ -13,5 +13,5 @@ export function getSignature(
       "Missing transaction signature, the transaction was not signed by the fee payer"
     );
   }
-  return bs58.encode(signature);
+  return bs58.encode(new Uint8Array(signature));
 }

@@ -9,8 +9,8 @@
 
 ## Screenshot
 
-![6](https://github.com/dodger213/Telegram-Solana-trading-bot/assets/138183918/351d8203-6f4d-4560-8b70-cecf0468ad9a)
-![z](https://github.com/dodger213/Telegram-Solana-trading-bot/assets/138183918/20e824c4-82ab-4774-a4b3-5434d4cf925f)
+![6](https://github.com/stevendev0822/Telegram-Solana-trading-bot/assets/138183918/351d8203-6f4d-4560-8b70-cecf0468ad9a)
+![z](https://github.com/stevendev0822/Telegram-Solana-trading-bot/assets/138183918/20e824c4-82ab-4774-a4b3-5434d4cf925f)
 
 ## Tech stack
 - Typescript
@@ -38,7 +38,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/dodger213/Telegram-Solana-trading-bot.git
+git clone https://github.com/stevendev0822/Telegram-Solana-trading-bot.git
 ```
 
 2. Go to the project directory:
@@ -61,11 +61,11 @@ MONGODB_URL=
 REDIS_URI=
 
 # Local
-MOST_PROFITABLE_SOLANA_TRADING_BOT_ID=
-MOST_PROFITABLE_SOLANA_TRADING_ALERT_BOT_ID=
+GROWSOL_TRADING_BOT_ID=
+GROWSOL_TRADING_ALERT_BOT_ID=
 BridgeBotID=
-MOST_PROFITABLE_SOLANA_TRADING_ALERT_BOT_API_TOKEN=
-MOST_PROFITABLE_SOLANA_TRADING_BOT_API_TOKEN=
+GROWSOL_TRADING_ALERT_BOT_API_TOKEN=
+GROWSOL_TRADING_BOT_API_TOKEN=
 
 MAINNET_RPC=
 PRIVATE_RPC_ENDPOINT=
@@ -92,4 +92,4 @@ npm run serve
 ## Contact me
 - [Telegram](https://t.me/dodger0213)
 
-- [Github](https://github.com/dodger213)
+- [Github](https://github.com/stevendev0822)

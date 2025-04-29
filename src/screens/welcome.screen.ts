@@ -2,7 +2,7 @@ import TelegramBot from "node-telegram-bot-api";
 import { UserService } from "../services/user.service";
 import { Keypair } from "@solana/web3.js";
 import bs58 from "bs58";
-import { GrowTradeVersion } from "../config";
+import { GROWSOLTradeVersion } from "../config";
 import { copytoclipboard } from "../utils";
 import { TokenService } from "../services/token.metadata";
 import { contractInfoScreenHandler } from "./contract.info.screen";

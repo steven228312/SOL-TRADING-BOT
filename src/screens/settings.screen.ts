@@ -9,7 +9,7 @@ import {
 } from "./common.screen";
 import { UserService } from "../services/user.service";
 import { copytoclipboard, fromWeiToValue } from "../utils";
-import { GrowTradeVersion, MAX_WALLET, private_connection } from "../config";
+import { GROWSOLTradeVersion, MAX_WALLET, private_connection } from "../config";
 import { MsgLogService } from "../services/msglog.service";
 import redisClient from "../services/redis";
 import {
@@ -56,7 +56,7 @@ export const settingScreenHandler = async (
     const { wallet_address, auto_buy, auto_buy_amount } = user;
 
     const caption =
-      `<b>GrowTrade ${GrowTradeVersion}</b>\n\n` +
+      `<b>GrowTrade ${GROWSOLTradeVersion}</b>\n\n` +
       `<b>AutoBuy</b>\n` +
       `Automatically execute buys upon pasting token address. Customize the Sol amount and press the button to activate/deactivate.\n\n` +
       `<b>Withdraw</b>\n` +
@@ -240,7 +240,7 @@ export const walletViewHandler = async (
     const { wallet_address } = activeuser;
 
     const caption =
-      `<b>GrowTrade ${GrowTradeVersion}</b>\n\n<b>Your active wallet:</b>\n` +
+      `<b>GrowTrade ${GROWSOLTradeVersion}</b>\n\n<b>Your active wallet:</b>\n` +
       `${copytoclipboard(wallet_address)}`;
     // const sentMessage = await bot.sendMessage(
     // chat_id,
