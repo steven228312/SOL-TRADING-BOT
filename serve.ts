@@ -3,7 +3,6 @@ import startTradeBot from "./src/main";
 import connectMongodb from "./src/services/mongodb";
 import redisClient from "./src/services/redis";
 
-
 // connect mongodb
 connectMongodb()
   .then(() => {
