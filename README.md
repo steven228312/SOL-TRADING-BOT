@@ -1,5 +1,9 @@
 # GROWSOL TRADING BOT - Solana Trading Telegram Bot (Raydium, Jupiter, Pump.fun)
 
+<p align="center">
+  <img src="https://github.com/stevendev0822/GROWSOL-TRADING-BOT/blob/master/src/public/GrowSolTradingBot.PNG" alt="GrowSolTradingBot">
+</p>
+
 ## Key Features
 
 - Comprehensive tracking of all tokens and pools across Raydium (AMM & CLMM), Jupiter, and Pump.fun
