@@ -1,5 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
-import { PNL_IMG_GENERATOR_API, TELEGRAM_BOT_API_TOKEN } from "./config";
+import { PNL_IMG_GENERATOR_API, MOST_PROFITABLE_SOLANA_TRADING_BOT_API_TOKEN } from "./config";
 import { AlertBotID, BotMenu } from "./bot.opts";
 import { WelcomeScreenHandler } from "./screens/welcome.screen";
 import { callbackQueryHandler } from "./controllers/callback.handler";
@@ -26,7 +26,7 @@ import { runListener } from "./raydium";
 import { wait } from "./utils/wait";
 import { runOpenmarketCronSchedule } from "./cron/remove.openmarket.cron";
 
-const token = TELEGRAM_BOT_API_TOKEN;
+const token = MOST_PROFITABLE_SOLANA_TRADING_BOT_API_TOKEN;
 
 if (!token) {
   throw new Error(
