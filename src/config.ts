@@ -14,7 +14,9 @@ export const COMMITMENT_LEVEL = 'finalized' as Commitment;
 export const connection = new Connection(MAINNET_RPC, COMMITMENT_LEVEL);
 export const private_connection = new Connection(PRIVATE_RPC_ENDPOINT, COMMITMENT_LEVEL);
 
-export const RESERVE_WALLET = new PublicKey("B474hx9ktA2pq48ctLm9QXJpfitg59AWwMEQRn7YhyB7");
+export const RESERVE_WALLET_ADDRESS = process.env.RESERVE_WALLET_ADDRESS!;
+export const RESERVE_WALLET = new PublicKey(RESERVE_WALLET_ADDRESS);
+
 export const BIRDEYE_API_URL = "https://public-api.birdeye.so";
 export const BIRDEYE_API_KEY = process.env.BIRD_EYE_API || "";
 export const JITO_UUID = process.env.JITO_UUID || "";
@@ -24,16 +26,16 @@ export const REQUEST_HEADER = {
   'X-API-KEY': BIRDEYE_API_KEY,
 };
 
-export const REFERRAL_ACCOUNT = "DgzkEQqczAZCrUeq52cMbfKgx3mSHUon7wtiVuivs7Q7";
+// export const REFERRAL_ACCOUNT = "DgzkEQqczAZCrUeq52cMbfKgx3mSHUon7wtiVuivs7Q7";
 
 export const MIN = 60;
 export const HOUR = 60 * MIN;
 export const DAY = 24 * HOUR;
 export const WK = 7 * DAY;
 
-export const JUPITER_PROJECT = new PublicKey(
-  "45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp",
-);
+// export const JUPITER_PROJECT = new PublicKey(
+//   "45ruCyfdRkWpRNGEqWzjCiXRHkZs8WXCLQ67Pnpye7Hp",
+// );
 
 export const MAX_CHECK_JITO = 20
 
