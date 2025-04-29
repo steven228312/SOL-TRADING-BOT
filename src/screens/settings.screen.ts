@@ -56,7 +56,7 @@ export const settingScreenHandler = async (
     const { wallet_address, auto_buy, auto_buy_amount } = user;
 
     const caption =
-      `<b>GrowTrade ${GROWSOLTradeVersion}</b>\n\n` +
+      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n\n` +
       `<b>AutoBuy</b>\n` +
       `Automatically execute buys upon pasting token address. Customize the Sol amount and press the button to activate/deactivate.\n\n` +
       `<b>Withdraw</b>\n` +
@@ -240,7 +240,7 @@ export const walletViewHandler = async (
     const { wallet_address } = activeuser;
 
     const caption =
-      `<b>GrowTrade ${GROWSOLTradeVersion}</b>\n\n<b>Your active wallet:</b>\n` +
+      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n\n<b>Your active wallet:</b>\n` +
       `${copytoclipboard(wallet_address)}`;
     // const sentMessage = await bot.sendMessage(
     // chat_id,
@@ -696,7 +696,6 @@ export const setCustomAutoBuyAmountHandler = async (
 ) => {
   try {
     const { id: chat_id, username } = msg.chat;
-    const message_id = msg.message_id;
     if (!username) {
       await sendUsernameRequiredNotification(bot, msg);
       return;
@@ -758,7 +757,7 @@ export const switchBurnOptsHandler = async (
     if (!user.burn_fee) {
       const caption =
         `Burn: On 🔥\n\n` +
-        `GrowTrade's burn functionality operates seamlessly through its fee system, where a portion of tokens bought and sold is systematically burned. This process does not affect users' own tokens but only those acquired through the fee mechanism, ensuring the safety of your trades.`;
+        `GrowSOLTrade's burn functionality operates seamlessly through its fee system, where a portion of tokens bought and sold is systematically burned. This process does not affect users' own tokens but only those acquired through the fee mechanism, ensuring the safety of your trades.`;
       bot.sendMessage(msg.chat.id, caption, closeReplyMarkup);
     }
     const reply_markup = {

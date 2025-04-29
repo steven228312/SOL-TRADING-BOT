@@ -76,7 +76,7 @@ const sendAlert = async (
 
     const botId = isTradeBot ? TradeBotID : BridgeBotID;
     const botImg = isTradeBot ? ALERT_GT_IMAGE : ALERT_GB_IMAGE;
-    const txt = isTradeBot ? "Try GrowTrade Now" : "Try GrowBridge Now";
+    const txt = isTradeBot ? "Try GrowSOLTrade Now" : "Try GrowBridge Now";
     const referralLink = `https://t.me/${botId}?start=${referral_code}`;
 
     const inline_keyboard = [
@@ -91,7 +91,7 @@ const sendAlert = async (
       inline_keyboard.push([
         {
           text: "Trade with us 📈",
-          url: "https://t.me/GrowTradeOfficial",
+          url: "https://t.me/GrowSOLTradeOfficial",
         },
       ]);
     }
@@ -248,7 +248,7 @@ export const sendAlertForOurChannel = async (alertBot: TelegramBot) => {
             },
           ],
           // [{
-          //   text: 'Start Trading With GrowTrade',
+          //   text: 'Start Trading With GrowSOLTrade',
           //   url: "https://t.me/growtradeapp_bot"
           // }],
         ],
