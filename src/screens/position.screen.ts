@@ -3,7 +3,7 @@ import { TokenService } from "../services/token.metadata";
 import { copytoclipboard } from "../utils";
 import { UserService } from "../services/user.service";
 import { sendUsernameRequiredNotification } from "./common.screen";
-import { GROWSOLTradeVersion, PNL_SHOW_THRESHOLD_USD } from "../config";
+import { GRSOLTradeVersion, PNL_SHOW_THRESHOLD_USD } from "../config";
 import { PositionService } from "../services/position.service";
 import { JupiterService } from "../services/jupiter.service";
 import { NATIVE_MINT } from "@solana/spl-token";
@@ -26,7 +26,7 @@ export const positionScreenHandler = async (
     if (!user) return;
 
     const temp =
-      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
+      `<b>GRSOLTrade ${GRSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
       `<i>${copytoclipboard(user.wallet_address)}</i>\n\n` +
       `<b>Loading...</b>\n`;
 
@@ -68,7 +68,7 @@ export const positionScreenHandler = async (
     const solbalance = await TokenService.getSOLBalance(user.wallet_address);
 
     let caption =
-      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
+      `<b>GRSOLTrade ${GRSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
       `<i>${copytoclipboard(user.wallet_address)}</i>\n\n` +
       `💳 Balance: <b>${solbalance} SOL</b>\n\n` +
       `<b>Please choose a token to buy/sell.</b>\n`;

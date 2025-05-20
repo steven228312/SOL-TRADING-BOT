@@ -1,9 +1,9 @@
 import { Commitment, Connection, PublicKey } from "@solana/web3.js";
 import 'dotenv/config';
 
-export const MONGODB_URL = process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/growtrade";
-export const GROWSOL_TRADING_BOT_API_TOKEN = process.env.GROWSOL_TRADING_BOT_API_TOKEN;
-export const ALERT_BOT_TOKEN_SECRET = process.env.GROWSOL_TRADING_ALERT_BOT_API_TOKEN;
+export const MONGODB_URL = process.env.MONGODB_URL || "mongodb://127.0.0.1:27017/grtrade";
+export const GRSOL_TRADING_BOT_API_TOKEN = process.env.GRSOL_TRADING_BOT_API_TOKEN;
+export const ALERT_BOT_TOKEN_SECRET = process.env.GRSOL_TRADING_ALERT_BOT_API_TOKEN;
 export const REDIS_URI = process.env.REDIS_URI || "redis://localhost:6379";
 
 export const MAINNET_RPC = process.env.MAINNET_RPC || "https://api.mainnet-beta.solana.com";
@@ -40,9 +40,9 @@ export const WK = 7 * DAY;
 export const MAX_CHECK_JITO = 20
 
 export const MAX_WALLET = 5;
-export const GROWSOLTradeVersion = '| Beta Version';
+export const GRSOLTradeVersion = '| Beta Version';
 
-export const GROWSOL_API_ENDPOINT = process.env.GROWSOL_API_ENDPOINT || "http://127.0.0.1:5001";
+export const GRSOL_API_ENDPOINT = process.env.GRSOL_API_ENDPOINT || "http://127.0.0.1:5001";
 export const PNL_IMG_GENERATOR_API = process.env.PNL_IMG_GENERATOR_API || "http://127.0.0.1:3001";
 
 export const PNL_SHOW_THRESHOLD_USD = 0.00000005;

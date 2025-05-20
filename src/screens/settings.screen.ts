@@ -9,7 +9,7 @@ import {
 } from "./common.screen";
 import { UserService } from "../services/user.service";
 import { copytoclipboard, fromWeiToValue } from "../utils";
-import { GROWSOLTradeVersion, MAX_WALLET, private_connection } from "../config";
+import { GRSOLTradeVersion, MAX_WALLET, private_connection } from "../config";
 import { MsgLogService } from "../services/msglog.service";
 import redisClient from "../services/redis";
 import {
@@ -56,7 +56,7 @@ export const settingScreenHandler = async (
     const { wallet_address, auto_buy, auto_buy_amount } = user;
 
     const caption =
-      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n\n` +
+      `<b>GRSOLTrade ${GRSOLTradeVersion}</b>\n\n` +
       `<b>AutoBuy</b>\n` +
       `Automatically execute buys upon pasting token address. Customize the Sol amount and press the button to activate/deactivate.\n\n` +
       `<b>Withdraw</b>\n` +
@@ -240,7 +240,7 @@ export const walletViewHandler = async (
     const { wallet_address } = activeuser;
 
     const caption =
-      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n\n<b>Your active wallet:</b>\n` +
+      `<b>GRSOLTrade ${GRSOLTradeVersion}</b>\n\n<b>Your active wallet:</b>\n` +
       `${copytoclipboard(wallet_address)}`;
     // const sentMessage = await bot.sendMessage(
     // chat_id,
@@ -757,7 +757,7 @@ export const switchBurnOptsHandler = async (
     if (!user.burn_fee) {
       const caption =
         `Burn: On 🔥\n\n` +
-        `GrowSOLTrade's burn functionality operates seamlessly through its fee system, where a portion of tokens bought and sold is systematically burned. This process does not affect users' own tokens but only those acquired through the fee mechanism, ensuring the safety of your trades.`;
+        `GRSOLTrade's burn functionality operates seamlessly through its fee system, where a portion of tokens bought and sold is systematically burned. This process does not affect users' own tokens but only those acquired through the fee mechanism, ensuring the safety of your trades.`;
       bot.sendMessage(msg.chat.id, caption, closeReplyMarkup);
     }
     const reply_markup = {
@@ -766,7 +766,7 @@ export const switchBurnOptsHandler = async (
           if (item.command.includes("bridge")) {
             return {
               text: item.text,
-              url: "https://t.me/growbridge_bot",
+              url: "https://t.me/grbridge_bot",
             };
           }
           if (item.text.includes("Burn")) {
