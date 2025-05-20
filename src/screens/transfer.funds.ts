@@ -11,7 +11,7 @@ import {
 import { UserService } from "../services/user.service";
 import { copytoclipboard, isValidWalletAddress } from "../utils";
 import { TokenService } from "../services/token.metadata";
-import { GROWSOLTradeVersion } from "../config";
+import { GRSOLTradeVersion } from "../config";
 import { WITHDRAW_TOKEN_AMT_TEXT, WITHDRAW_XTOKEN_TEXT } from "../bot.opts";
 import { MsgLogService } from "../services/msglog.service";
 import { JupiterService } from "../services/jupiter.service";
@@ -34,7 +34,7 @@ export const transferFundScreenHandler = async (
     if (!user) return;
 
     const temp =
-      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
+      `<b>GRSOLTrade ${GRSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
       `<i>${copytoclipboard(user.wallet_address)}</i>\n\n` +
       `<b>Balance: loading...</b>\n`;
 
@@ -71,7 +71,7 @@ export const transferFundScreenHandler = async (
     );
 
     let caption =
-      `<b>GrowSOLTrade ${GROWSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
+      `<b>GRSOLTrade ${GRSOLTradeVersion}</b>\n💳 <b>Your wallet address</b>\n` +
       `<i>${copytoclipboard(user.wallet_address)}</i>\n\n` +
       `<b>Balance: ${sol} SOL</b>\n`;
 

@@ -18,7 +18,7 @@ import { UserTradeSettingService } from "./user.trade.setting.service";
 // const provider = new ReferralProvider(connection);
 
 const config = {
-  basePath: "https://growtradebot.fly.dev"
+  basePath: "https://grtradebot.fly.dev"
 }
 
 let jupiterTradeableTokens: Array<string> = [];
@@ -72,7 +72,7 @@ export class JupiterService {
     }
 
     const config = {
-      basePath: "https://growtradebot.fly.dev"
+      basePath: "https://grtradebot.fly.dev"
     }
     const jupiterQuoteApi = createJupiterApiClient(config);
     const tokens = await jupiterQuoteApi.tokensGet();
@@ -121,7 +121,7 @@ export class JupiterService {
       const wallet = Keypair.fromSecretKey(bs58.decode(pk));
 
       const config = {
-        basePath: "https://growtradebot.fly.dev"
+        basePath: "https://grtradebot.fly.dev"
       }
       const jupiterQuoteApi = createJupiterApiClient(config);
       // const jupiterQuoteApi = createJupiterApiClient();

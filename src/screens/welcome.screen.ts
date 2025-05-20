@@ -2,7 +2,7 @@ import TelegramBot from "node-telegram-bot-api";
 import { UserService } from "../services/user.service";
 import { Keypair } from "@solana/web3.js";
 import bs58 from "bs58";
-import { GROWSOLTradeVersion } from "../config";
+import { GRSOLTradeVersion } from "../config";
 import { copytoclipboard } from "../utils";
 import { TokenService } from "../services/token.metadata";
 import { contractInfoScreenHandler } from "./contract.info.screen";
@@ -101,7 +101,7 @@ const newUserHandler = async (bot: TelegramBot, msg: TelegramBot.Message) => {
     `<b>⚠️ Please save your private key securely:</b>\n\n` +
     `<tg-spoiler>${private_key}</tg-spoiler>\n\n` +
     `🔰 <b>Important:</b> Losing this key means losing access to your wallet.\n\n` +
-    `📘 <b>To get started, check out our <a href="https://docs.growsol.io">documentation</a>.</b>`;
+    `📘 <b>To get started, check out our <a href="https://docs.grsol.io">documentation</a>.</b>`;
 
   await bot.sendMessage(chat_id, caption, {
     parse_mode: "HTML",
@@ -140,10 +140,10 @@ export const welcomeGuideHandler = async (
     `<b>💳 Wallet Address:</b>\n${copytoclipboard(user.wallet_address)}\n\n` +
     `<b>💰 Balance:</b> ${solbalance} SOL\n\n` +
     `<a href="https://solscan.io/address/${user.wallet_address}">🔍 View on Solscan</a>\n\n` +
-    `🌐 <b>Part of the <a href="https://growsol.io">GrowSol</a> Ecosystem</b>\n\n` +
+    `🌐 <b>Part of the <a href="https://grsol.io">GRSol</a> Ecosystem</b>\n\n` +
     // `-----------------------\n` +
-    // `<a href="https://docs.growsol.io/docs">📖 Docs</a>\n` +
-    // `<a href="https://growsol.io">🌍 Website</a>\n\n` +
+    // `<a href="https://docs.grsol.io/docs">📖 Docs</a>\n` +
+    // `<a href="https://grsol.io">🌍 Website</a>\n\n` +
     `<b>📥 Paste a contract address to open the Buy/Sell menu, or choose an option below to get started.</b>`;
 
   // const textEventHandler = async (msg: TelegramBot.Message) => {
@@ -173,7 +173,7 @@ export const welcomeGuideHandler = async (
         if (item.command.includes("bridge")) {
           return {
             text: item.text,
-            url: "https://t.me/growbridge_bot",
+            url: "https://t.me/grbridge_bot",
           };
         }
         if (item.text.includes("Burn")) {

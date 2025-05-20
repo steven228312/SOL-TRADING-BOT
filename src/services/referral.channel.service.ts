@@ -1,5 +1,5 @@
 import axios from "axios";
-import { GROWSOL_API_ENDPOINT } from "../config";
+import { GRSOL_API_ENDPOINT } from "../config";
 
 export enum ReferralPlatform {
   TradeBot,
@@ -8,7 +8,7 @@ export enum ReferralPlatform {
 export class ReferralChannelService {
   endpoint: string;
   constructor() {
-    this.endpoint = GROWSOL_API_ENDPOINT;
+    this.endpoint = GRSOL_API_ENDPOINT;
   }
 
   async createReferralChannel(

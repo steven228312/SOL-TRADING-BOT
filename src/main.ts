@@ -1,5 +1,5 @@
 import TelegramBot from "node-telegram-bot-api";
-import { GROWSOL_TRADING_BOT_API_TOKEN } from "./config";
+import { GRSOL_TRADING_BOT_API_TOKEN } from "./config";
 import { AlertBotID, BotMenu } from "./bot.opts";
 import { WelcomeScreenHandler } from "./screens/welcome.screen";
 import { callbackQueryHandler } from "./controllers/callback.handler";
@@ -26,7 +26,7 @@ import { runListener } from "./raydium";
 import { wait } from "./utils/wait";
 import { runOpenmarketCronSchedule } from "./cron/remove.openmarket.cron";
 
-const token = GROWSOL_TRADING_BOT_API_TOKEN;
+const token = GRSOL_TRADING_BOT_API_TOKEN;
 
 if (!token) {
   throw new Error(

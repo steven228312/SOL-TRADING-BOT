@@ -66,13 +66,13 @@ MONGODB_URL="<your_database_name>"
 REDIS_URI="<your_redis_uri>"
 
 # Telegram Bot Configuration
-GROWSOL_TRADING_BOT_ID=<your_bot_id>  
-GROWSOL_TRADING_ALERT_BOT_ID=<your_alert_bot_id>  
-GROWSOL_BRIDGE_BOT_ID=<your_bridge_bot_id>
-GROWSOL_BRIDGE_BOT_TOKEN=<your_bridge_bot_token> 
-GROWSOL_TRADING_ALERT_BOT_API_TOKEN=<your_alert_bot_api_token>  
-GROWSOL_TRADING_BOT_API_TOKEN=<your_bot_api_token> 
-GROWSOL_API_ENDPOINT=<your_growsol_api_endpoint>  
+GRSOL_TRADING_BOT_ID=<your_bot_id>  
+GRSOL_TRADING_ALERT_BOT_ID=<your_alert_bot_id>  
+GRSOL_BRIDGE_BOT_ID=<your_bridge_bot_id>
+GRSOL_BRIDGE_BOT_TOKEN=<your_bridge_bot_token> 
+GRSOL_TRADING_ALERT_BOT_API_TOKEN=<your_alert_bot_api_token>  
+GRSOL_TRADING_BOT_API_TOKEN=<your_bot_api_token> 
+GRSOL_API_ENDPOINT=<your_grsol_api_endpoint>  
 
 # Solana Configuration
 MAINNET_RPC="<Solana_mainnet_rpc_endpoint>"
