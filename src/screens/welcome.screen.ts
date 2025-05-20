@@ -95,7 +95,7 @@ const newUserHandler = async (bot: TelegramBot, msg: TelegramBot.Message) => {
 
   // send private key & wallet address
   const caption =
-    `👋 Welcome to GrowSOL TradeBot, ${msg.chat.first_name || 'friend'}!\n\n` +
+    `👋 Welcome to SOL TradeBot, ${msg.chat.first_name || 'friend'}!\n\n` +
     `🎉 A new wallet has been successfully created for you. Below is your wallet address:\n\n` +
     `${wallet_address}\n\n` +
     `<b>⚠️ Please save your private key securely:</b>\n\n` +
@@ -133,10 +133,10 @@ export const welcomeGuideHandler = async (
   if (!user) return;
   const solbalance = await TokenService.getSOLBalance(user.wallet_address);
   const caption =
-    `<b>👋 Welcome to GrowSOLTrade, ${msg.chat.first_name || 'friend'}!</b>\n\n` +
+    `<b>👋 Welcome to SOLTrade, ${msg.chat.first_name || 'friend'}!</b>\n\n` +
     `🚀 The unique Solana trading bot that lets you snipe, trade, and manage your positions with ease.\n\n` +
     `🔹 <b>Innovative Burn Mechanism</b> — unlike anything seen before 🔥\n` +
-    `🔹 <b>Revenue Sharing</b> through GrowSol ($GRW) buybacks\n\n` +
+    `🔹 <b>Revenue Sharing</b> through GRSol ($GRW) buybacks\n\n` +
     `<b>💳 Wallet Address:</b>\n${copytoclipboard(user.wallet_address)}\n\n` +
     `<b>💰 Balance:</b> ${solbalance} SOL\n\n` +
     `<a href="https://solscan.io/address/${user.wallet_address}">🔍 View on Solscan</a>\n\n` +
